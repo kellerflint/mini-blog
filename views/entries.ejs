@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>All Entries</title>
+</head>
+<body>
+  <div class="container">
+    <h1>All Posts</h1>
+    <% for (let i = 0; i < posts.length; i++) { %>
+      <div class="post">
+        <h2><%= posts[i].title %></h2>
+        <p><%= posts[i].content %></p>
+        <p>Author: <%= posts[i].author %></p>
+        <!--<p>Author: <%= posts[i].author %> | Date: <%= posts[i].date.toLocaleString() %></p>-->
+      </div>
+    <% } %>
+    <a href="/">Create a New Post</a> | <a href="/recent">View Admin Posts</a>
+  </div>
+</body>
+</html>
